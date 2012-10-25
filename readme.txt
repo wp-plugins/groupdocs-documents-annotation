@@ -1,4 +1,4 @@
-=== GroupDocs Annotation ===
+=== GroupDocs Word, Excel, Powerpoint, Image and PDF Annotate ===
 Contributors: GroupDocs Team
 Tags: annotation, doc, docx, pdf, ppt, pptx, xls, xlsx, groupdocs, powerpoint, excel, word, acrobat
 Author URI: http://groupdocs.com
