@@ -39,7 +39,10 @@ Be aware that to upload the document with this plugin to your groupdocs.com acco
 == Screenshots ==
 
 1. Here's a screenshot of how to get your document link for insertion into the GroupDocs Annotation Embedder dialog
-2. Here's a screenshot of the GroupDocs Annotation Embedder in a Wordpress blog
+2. Here's a screenshot of the GroupDocs Annotation Embedder in a Wordpress blog (with Polyline annotation)
+3. Here's a screenshot of the GroupDocs Annotation Embedder in a Wordpress blog (with Point annotation)
+4. Here's a screenshot of the GroupDocs Annotation Embedder in a Wordpress blog (with Area annotation)
+5. Here's a screenshot of the GroupDocs Annotation Embedder in a Wordpress admin panel
 
 
 == Frequently Asked Questions ==
