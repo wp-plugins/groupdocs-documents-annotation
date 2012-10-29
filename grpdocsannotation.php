@@ -69,5 +69,5 @@ function grpdocs_annotation_options() {
 	if ( function_exists('current_user_can') && !current_user_can('manage_options') ) die(t('An error occurred.'));
 	if (! user_can_access_admin_page()) wp_die('You do not have sufficient permissions to access this page');
 
-	require(ABSPATH. 'wp-content/plugins/groupdocs-annotation/options.php');
+	require(ABSPATH. 'wp-content/plugins/groupdocs-documents-annotation/options.php');
 }

@@ -26,7 +26,7 @@ GroupDocs Annotation has a simple document annotation workflow: upload a Microso
 
 == Installation ==
 
-1. Upload the entire `groupdocs-annotation` folder to the `/wp-content/plugins/` directory.
+1. Upload the entire `groupdocs-documents-annotation` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the `Plugins` menu in WordPress.
 3. Done.
 
