@@ -56,6 +56,9 @@ For further help you may choose any of following options:
 cURL extension is required (extension=php_curl.dll)
 
 == Changelog ==
+= 1.3.1=
+* Fixed a bug relating include error.
+
 = 1.3.0=
 * New version with tree viewer.
 
