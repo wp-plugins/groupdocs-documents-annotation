@@ -7,7 +7,7 @@ Tested up to: 3.4.1
 Stable tag: trunk
 License: GPLv2
 
-Lets you embed the GroupDocs Annotation into Wordpress to annotate your documents directly in WP website.
+Lets you embed the GroupDocs Annotation into Wordpress to annotate your documents directly in WordPress website.
 
 == Description ==
 
@@ -15,8 +15,9 @@ GroupDocs Annotation lets you embed several types of files into your WordPress p
 
 * Adobe Acrobat (PDF)
 * Microsoft Word (DOC/DOCX)
-* Microsoft PowerPoint (PPT/PPTX)
 * Microsoft Excel (XLS/XLSX)
+* Microsoft PowerPoint (PPT/PPTX)
+
 
 GroupDocs Annotation lets you view and comment on documents online. Its document annotation features makes it a powerful tool for collaboration. You and your colleagues can collaborate on a document, at the same time, to improve communication and speed up document reviews. GroupDocs Annotation lets you work with text-based documents as well as images. You can collaborate on layouts, drawings and designs just as effectively as on articles, stories and corporate documents. In short GroupDocs Annotation lets you [annotate](http://groupdocs.com/apps/annotation) on many file formats including PDF's, Word documents, Excel documents, Powerpoint documents and many other available formats.
 
@@ -25,6 +26,8 @@ GroupDocs Annotation has a simple document annotation workflow: upload a Microso
 
 
 == Installation ==
+
+= Manual installation =
 
 1. Upload the entire `groupdocs-documents-annotation` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the `Plugins` menu in WordPress.
