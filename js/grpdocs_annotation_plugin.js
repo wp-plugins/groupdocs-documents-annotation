@@ -16,7 +16,7 @@
 			ed.addButton('grpdocs_annotation', {
 				title : 'GroupDocs Annotation Embedder',
 				cmd : 'mceGrpdocsAnnotation',
-				image : url + '/../images/grpdocs-annotation-button.gif'
+				image : url + '/../images/grpdocs-annotation-button.png'
 			});
 			ed.onNodeChange.add
 				(function(ed,cm,n) {
