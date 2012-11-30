@@ -76,7 +76,7 @@ error_reporting(E_ALL | E_STRICT);
 
 <div class="box">
  
-  <strong>Document Link</strong><br />
+  <strong>Document Id (GUID)</strong><br />
   <input name="url" type="text" class="opt dwl" id="url" style="width:200px;" /><br/>
   <span id="uri-note"></span>
   
