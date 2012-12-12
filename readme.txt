@@ -59,16 +59,16 @@ For further help you may choose any of following options:
 cURL extension is required (extension=php_curl.dll)
 
 == Changelog ==
-= 1.3.1=
+= 1.3.1 =
 * Fixed a bug relating include error.
 
-= 1.3.0=
+= 1.3.0 =
 * New version with tree viewer.
 
-= 1.2.2=
+= 1.2.2 =
 * New tabs view.
 
-= 1.2.1=
+= 1.2.1 =
 * Updated compatibility, and tags
 
 = 1.2 = 
