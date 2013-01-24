@@ -1,6 +1,6 @@
 <?php
 /**
- *  Copyright 2011 Wordnik, Inc.
+ *  Copyright 2012 GroupDocs.
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
- 
+
 /**
  * 
  *
@@ -23,115 +23,57 @@
  */
 class UserInfo {
 
-  static $swaggerTypes = array(    
-    'nickname' => 'string',
-    'signedupOn' => 'int',
-    'pkey' => 'string',
-    'lastname' => 'string',
-    'firstname' => 'string',
-    'news_eanbled' => 'bool',
-    'photo' => 'array<int>',
-    'guid' => 'string',
-    'id' => 'float',
-    'pswd_salt' => 'string',
-    'token' => 'string',
-    'primary_email' => 'string',
-    'active' => 'bool',
-    'claimed_id' => 'string',
-    'storage' => 'int'   
+  static $swaggerTypes = array(
+      'nickname' => 'string',
+      'firstname' => 'string',
+      'lastname' => 'string',
+      'pkey' => 'string',
+      'pswd_salt' => 'string',
+      'claimed_id' => 'string',
+      'token' => 'string',
+      'storage' => 'int',
+      'photo' => 'string',
+      'active' => 'bool',
+      'trial' => 'bool',
+      'news_eanbled' => 'bool',
+      'alerts_eanbled' => 'bool',
+      'support_eanbled' => 'bool',
+      'support_email' => 'string',
+      'annotation_branded' => 'bool',
+      'viewer_branded' => 'bool',
+      'signedupOn' => 'string',
+      'signedinOn' => 'string',
+      'signin_count' => 'int',
+      'roles' => 'array[RoleInfo]',
+      'id' => 'float',
+      'guid' => 'string',
+      'primary_email' => 'string'
+
     );
 
+  public $nickname; // string
+  public $firstname; // string
+  public $lastname; // string
+  public $pkey; // string
+  public $pswd_salt; // string
+  public $claimed_id; // string
+  public $token; // string
+  public $storage; // int
+  public $photo; // string
+  public $active; // bool
+  public $trial; // bool
+  public $news_eanbled; // bool
+  public $alerts_eanbled; // bool
+  public $support_eanbled; // bool
+  public $support_email; // string
+  public $annotation_branded; // bool
+  public $viewer_branded; // bool
+  public $signedupOn; // string
+  public $signedinOn; // string
+  public $signin_count; // int
+  public $roles; // array[RoleInfo]
+  public $id; // float
+  public $guid; // string
+  public $primary_email; // string
+  }
 
-    /**
-     * 
-     */
-	 public $nickname;// string
-
-
-    /**
-     * 
-     */
-	 public $signedupOn;// int
-
-
-    /**
-     * 
-     */
-	 public $pkey;// string
-
-
-    /**
-     * 
-     */
-	 public $lastname;// string
-
-
-    /**
-     * 
-     */
-	 public $firstname;// string
-
-
-    /**
-     * 
-     */
-	 public $news_eanbled;// bool
-
-
-    /**
-     * 
-     */
-	 public $photo =  array();// array<int>
-
-
-    /**
-     * 
-     */
-	 public $guid;// string
-
-
-    /**
-     * 
-     */
-	 public $id;// float
-
-
-    /**
-     * 
-     */
-	 public $pswd_salt;// string
-
-
-    /**
-     * 
-     */
-	 public $token;// string
-
-
-    /**
-     * 
-     */
-	 public $primary_email;// string
-
-
-    /**
-     * 
-     */
-	 public $active;// bool
-
-
-    /**
-     * 
-     */
-	 public $claimed_id;// string
-
-
-    /**
-     * 
-     */
-	 public $storage;// int
-
-
-}
-
-?>

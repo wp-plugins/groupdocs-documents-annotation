@@ -1,6 +1,6 @@
 <?php
 /**
- *  Copyright 2011 Wordnik, Inc.
+ *  Copyright 2012 GroupDocs.
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
- 
+
 /**
  * 
  *
@@ -23,38 +23,17 @@
  */
 class ListEntitiesResult {
 
-  static $swaggerTypes = array(    
-    'files' => 'array<FileSystemDocument>',
-    'count' => 'int',
-    'path' => 'string',
-    'folders' => 'array<FileSystemFolder>'   
+  static $swaggerTypes = array(
+      'path' => 'string',
+      'count' => 'int',
+      'folders' => 'array[FileSystemFolder]',
+      'files' => 'array[FileSystemDocument]'
+
     );
 
+  public $path; // string
+  public $count; // int
+  public $folders; // array[FileSystemFolder]
+  public $files; // array[FileSystemDocument]
+  }
 
-    /**
-     * 
-     */
-	 public $files =  array();// array<FileSystemDocument>
-
-
-    /**
-     * 
-     */
-	 public $count;// int
-
-
-    /**
-     * 
-     */
-	 public $path;// string
-
-
-    /**
-     * 
-     */
-	 public $folders =  array();// array<FileSystemFolder>
-
-
-}
-
-?>

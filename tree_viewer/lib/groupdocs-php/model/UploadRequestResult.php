@@ -1,6 +1,6 @@
 <?php
 /**
- *  Copyright 2011 Wordnik, Inc.
+ *  Copyright 2012 GroupDocs.
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
- 
+
 /**
  * 
  *
@@ -23,73 +23,27 @@
  */
 class UploadRequestResult {
 
-  static $swaggerTypes = array(    
-    'guid' => 'string',
-    'id' => 'float',
-    'thumbnail' => 'array<int>',
-    'adj_name' => 'string',
-    'type' => 'string',
-    'url' => 'string',
-    'version' => 'int',
-    'size' => 'int',
-    'file_type' => 'string'   
+  static $swaggerTypes = array(
+      'adj_name' => 'string',
+      'url' => 'string',
+      'type' => 'string',
+      'file_type' => 'string',
+      'size' => 'string',
+      'version' => 'int',
+      'thumbnail' => 'string',
+      'id' => 'float',
+      'guid' => 'string'
+
     );
 
+  public $adj_name; // string
+  public $url; // string
+  public $type; // string
+  public $file_type; // string
+  public $size; // string
+  public $version; // int
+  public $thumbnail; // string
+  public $id; // float
+  public $guid; // string
+  }
 
-    /**
-     * 
-     */
-	 public $guid;// string
-
-
-    /**
-     * 
-     */
-	 public $id;// float
-
-
-    /**
-     * 
-     */
-	 public $thumbnail =  array();// array<int>
-
-
-    /**
-     * 
-     */
-	 public $adj_name;// string
-
-
-    /**
-     * 
-     */
-	 public $type;// string
-
-
-    /**
-     * 
-     */
-	 public $url;// string
-
-
-    /**
-     * 
-     */
-	 public $version;// int
-
-
-    /**
-     * 
-     */
-	 public $size;// int
-
-
-    /**
-     * 
-     */
-	 public $file_type;// string
-
-
-}
-
-?>
