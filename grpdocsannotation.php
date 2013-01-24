@@ -27,7 +27,7 @@ function grpdocs_annotation_getdocument($atts) {
 	$guid = grpdocs_annotation_getGuid(urlencode($file));
 
 //	$code = "<iframe src='https://dev-apps.groupdocs.com/document-viewer/embed/{$guid}' frameborder='0' width='600' height='700'></iframe>";
-	$code = "<iframe src='http://apps.groupdocs.com/document-annotation/embed/{$guid}?&referer=wordpress/1.3.2' frameborder='0' width='{$width}' height='{$height}'></iframe>";
+	$code = "<iframe src='http://apps.groupdocs.com/document-annotation/embed/{$guid}?&referer=wordpress/1.3.2&use_pdf=true' frameborder='0' width='{$width}' height='{$height}'></iframe>";
 
 
 	$code = str_replace("%W%", $width, $code);
