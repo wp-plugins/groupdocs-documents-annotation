@@ -135,6 +135,7 @@ define("UPLOAD_ERR_EMPTY",5);
 		echo "<div class='red'>" . $err . "</div>";
 	} else {
 	
+
 		include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/APIClient.php');
     	include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/StorageAPI.php');
     	include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/GroupDocsRequestSigner.php');
@@ -152,7 +153,6 @@ define("UPLOAD_ERR_EMPTY",5);
     	$api = new StorageApi($apiClient);
 
 		$result = $api->Upload($_POST['userId'], $name, 'uploaded', $fs);
-
 		echo"<script>
 			tinyMCEPopup.editor.execCommand('mceInsertContent', false, '[grpdocsannotation file=\"" . @$result->result->guid . "\" height=\"{$_POST['height']}\" width=\"{$_POST['width']}\"]');
 			tinyMCEPopup.close();</script>";
