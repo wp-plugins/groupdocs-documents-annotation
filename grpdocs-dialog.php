@@ -135,19 +135,23 @@ define("UPLOAD_ERR_EMPTY",5);
 		echo "<div class='red'>" . $err . "</div>";
 	} else {
 	
-		include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/api/APIClient.php');
-		include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/api/StorageAPI.php');
+		include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/APIClient.php');
+    	include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/StorageAPI.php');
+    	include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/GroupDocsRequestSigner.php');
+		include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/FileStream.php');
 
 		$uploads_dir = dirname(__FILE__);
 
 		$tmp_name = $_FILES["file"]["tmp_name"];
 		$name = $_FILES["file"]["name"];
-		
-		$privateKey = trim($_POST['privateKey']);
-		$userId = trim($_POST['userId']);
-		$apiClient = new APIClient($privateKey, "https://api.groupdocs.com/v2.0");
-		$api = new StorageAPI($apiClient);
-		$result = $api->Upload($userId, $name, "uploaded", "file://$tmp_name");
+		$fs = FileStream::fromFile($tmp_name);
+
+
+		$signer = new GroupDocsRequestSigner(trim($_POST['privateKey']));
+    	$apiClient = new APIClient($signer);
+    	$api = new StorageApi($apiClient);
+
+		$result = $api->Upload($_POST['userId'], $name, 'uploaded', $fs);
 
 		echo"<script>
 			tinyMCEPopup.editor.execCommand('mceInsertContent', false, '[grpdocsannotation file=\"" . @$result->result->guid . "\" height=\"{$_POST['height']}\" width=\"{$_POST['width']}\"]');
