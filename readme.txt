@@ -3,7 +3,7 @@ Contributors: GroupDocs Team
 Tags: annotation, doc, docx, pdf, ppt, pptx, xls, xlsx, groupdocs, powerpoint, excel, word, acrobat
 Author URI: http://groupdocs.com
 Requires at least: 2.8
-Tested up to: 3.4.1
+Tested up to: 3.5.0
 Stable tag: trunk
 License: GPLv2
 
