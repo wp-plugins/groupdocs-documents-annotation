@@ -25,6 +25,8 @@ GroupDocs Annotation lets you view and comment on documents online. Its document
 GroupDocs Annotation has a simple document annotation workflow: upload a Microsoft Word or PDF file to the dashboard, select it and got to the GroupDocs Annotation app. Share the document with colleagues so that they too can annotate it. You can now add comments to the document. When the review is complete, save the document with Microsoft Word comments so that you can edit by simply accepting or rejecting changes.
 
 
+
+
 == Installation ==
 
 = Manual installation =
