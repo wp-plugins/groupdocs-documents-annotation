@@ -62,6 +62,10 @@ For further help you may choose any of following options:
 cURL extension is required (extension=php_curl.dll)
 
 == Changelog ==
+
+= 1.3.3 =
+* Fixed a bug with pop-up window.
+
 = 1.3.2 =
 * Update GroupDocs SDK.
 * Update tracking parameter.
