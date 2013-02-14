@@ -137,7 +137,7 @@ define("UPLOAD_ERR_EMPTY",5);
 	
 
 		include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/APIClient.php');
-    	include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/StorageAPI.php');
+    	include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/StorageApi.php');
     	include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/GroupDocsRequestSigner.php');
 		include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/FileStream.php');
 
