@@ -64,6 +64,10 @@ For further help you may choose any of following options:
 
 cURL extension is required (extension=php_curl.dll)
 
+= How to get Document ID (GUID) =
+
+You can find how to get Document GUID [here](http://groupdocs.com/docs/pages/viewpage.action?pageId=1409575)
+
 == Changelog ==
 
 = 1.3.4 =
