@@ -4,7 +4,7 @@ Tags: annotation, doc, docx, pdf, ppt, pptx, xls, xlsx, groupdocs, powerpoint, e
 Author URI: http://groupdocs.com
 Requires at least: 2.8
 Tested up to: 3.5.0
-Stable tag: trunk
+Stable tag: trunk 
 License: GPLv2
 
 Lets you embed the GroupDocs Annotation into Wordpress to annotate your documents directly in WordPress website.
