@@ -91,14 +91,14 @@ You can find how to get Document GUID [here](http://groupdocs.com/docs/pages/vie
 * New tabs view.
 
 = 1.2.1 =
-* Updated compatibility, and tags
+* Updated compatibility, and tags.
 
 = 1.2 = 
-* Fixed a bug relating to url encoding in the file variable
-* Fixed issue relating to security warning in Chrome
+* Fixed a bug relating to url encoding in the file variable.
+* Fixed issue relating to security warning in Chrome.
  
 = 1.1 = 
-* Fixed 2 path related bugs
+* Fixed 2 path related bugs.
 
 = 1.0 =
-* Initial release
+* Initial release.
