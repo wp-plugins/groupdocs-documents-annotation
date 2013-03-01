@@ -56,6 +56,7 @@ Be aware that to upload the document with this plugin to your groupdocs.com acco
 == Frequently Asked Questions ==
 
 = How can I get detailed help =
+
 For further help you may choose any of following options:
 
 * You can also contact us by various means as mentioned on our [Contact Us](http://groupdocs.com/about/contact/) page.
