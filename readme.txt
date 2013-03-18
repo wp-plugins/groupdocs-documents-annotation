@@ -14,8 +14,11 @@ Lets you embed the GroupDocs Annotation into Wordpress to annotate your document
 GroupDocs Annotation lets you embed several types of files into your WordPress pages using the GroupDocs Viewer - allowing inline viewing and annotation of the following file types, with no Flash or PDF browser plug-ins required: 
 
 * Adobe Acrobat (PDF)
+
 * Microsoft Word (DOC/DOCX)
+
 * Microsoft Excel (XLS/XLSX)
+
 * Microsoft PowerPoint (PPT/PPTX)
 
 
