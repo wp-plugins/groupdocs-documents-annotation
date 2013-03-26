@@ -1,6 +1,6 @@
 === GroupDocs Word, Excel, Powerpoint, Image and PDF Annotate ===
 Contributors: GroupDocs Team
-Tags: annotation, doc, docx, pdf, ppt, pptx, xls, xlsx, groupdocs, powerpoint, excel, word, acrobat
+Tags: annotation, doc, docx, pdf, ppt, pptx, xls, xlsx, groupdocs, powerpoint, excel, word, acrobat, plugin, image, page, comments
 Author URI: http://groupdocs.com
 Requires at least: 2.8
 Tested up to: 3.5.0
