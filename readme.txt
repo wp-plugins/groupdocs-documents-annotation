@@ -8,6 +8,7 @@ Tested up to: 3.5.0
 Stable tag: trunk 
 License: GPLv2
 
+
 Lets you embed the GroupDocs Annotation into Wordpress to annotate your documents directly in WordPress website.
 
 == Description ==
