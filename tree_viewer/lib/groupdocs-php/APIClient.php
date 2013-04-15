@@ -253,13 +253,23 @@ class APIClient {
 	public static function toPathValue($object) {
         if (is_array($object)) {
             return implode(',', array_map(function($obj) {
-            	return var_export($obj, true);
+            	return self::unquote(var_export($obj, true));
 			}, $object));
         } else {
-            return var_export($object, true);
+            return self::unquote(var_export($object, true));
         }
 	}
 
+	public static function unquote($str) {
+		$to_return = $str;
+		if(self::startsWith($to_return, "'") && self::endsWith($to_return, "'")){
+			$to_return = str_replace("'", "", $to_return);
+		}
+		if(self::startsWith($to_return, '"') && self::endsWith($to_return, '"')){
+			$to_return = str_replace('"', '', $to_return);
+		}
+        return $to_return;
+	}
 
 	/**
 	 * Derialize a JSON string into an object
@@ -304,7 +314,7 @@ class APIClient {
 				} else {
 					// trigger_error("class $class has no property $property", E_USER_WARNING);
 					// ignore newly added attributes
-					break;
+					continue;
 				}
 			}
 
@@ -381,6 +391,26 @@ class APIClient {
 		return 'data:'.self::getMimeType($filePath).';base64,'.base64_encode(file_get_contents($filePath));
 	}
 
+	/**
+	* Starts the $haystack string with the prefix $needle?
+	* @param  string
+	* @param  string
+	* @return bool
+	*/
+	public static function startsWith($haystack, $needle) {
+		return strncmp($haystack, $needle, strlen($needle)) === 0;
+	}
+	
+	
+	/**
+	* Ends the $haystack string with the suffix $needle?
+	* @param  string
+	* @param  string
+	* @return bool
+	*/
+	public static function endsWith($haystack, $needle) {
+		return strlen($needle) === 0 || substr($haystack, -strlen($needle)) === $needle;
+	}
 }
 
 class ApiException extends Exception {

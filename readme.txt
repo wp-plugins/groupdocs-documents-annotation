@@ -1,4 +1,3 @@
-
 === GroupDocs Word, Excel, Powerpoint, Image and PDF Annotate ===
 Contributors: GroupDocs Team
 Tags: annotation, doc, docx, pdf, ppt, pptx, xls, xlsx, groupdocs, powerpoint, excel, word, acrobat, plugin, image, page, comments
@@ -75,6 +74,8 @@ cURL extension is required (extension=php_curl.dll)
 You can find how to get Document GUID [here](http://groupdocs.com/docs/pages/viewpage.action?pageId=1409575)
 
 == Changelog ==
+= 1.3.5 =
+* Updated GroupDocs SDK.
 
 = 1.3.4 =
 * Fix bug with PHP Warning.
