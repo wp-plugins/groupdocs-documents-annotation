@@ -6,7 +6,7 @@ Plugin URI: http://www.groupdocs.com/
 Description: Lets you embed PPT, PPTX, XLS, XLSX, DOC, DOCX, PDF and many other formats from your GroupDocs acount in a web page using the GroupDocs Embedded Viewer (no Flash or PDF browser plug-ins required).
 Author: GroupDocs Team <support@groupdocs.com>
 Author URI: http://www.groupdocs.com/
-Version: 1.3.5
+Version: 1.3.6
 License: GPLv2
 */
 
@@ -26,8 +26,8 @@ function grpdocs_annotation_getdocument($atts) {
 
 	$guid = grpdocs_annotation_getGuid(urlencode($file));
 
-//	$code = "<iframe src='https://dev-apps.groupdocs.com/document-viewer/embed/{$guid}' frameborder='0' width='600' height='700'></iframe>";
-	$code = "<iframe src='http://apps.groupdocs.com/document-annotation/embed/{$guid}?&referer=wordpress/1.3.5&use_pdf=true' frameborder='0' width='{$width}' height='{$height}'></iframe>";
+	$if_no_iframe = 'If you can see this text, your browser does not support iframes. Please enable iframe support in your browser or use the latest version of any popular web browsers such as Mozilla FireFox or Google Chrome. <br/> Learn how to <a href="http://groupdocs.com/apps/annotation">annotate pdf</a> files online with GroupDocs.';
+	$code = "<iframe src='http://apps.groupdocs.com/document-annotation/embed/{$guid}?&referer=wordpress/1.3.6&use_pdf=true' frameborder='0' width='{$width}' height='{$height}'></iframe>";
 
 
 	$code = str_replace("%W%", $width, $code);

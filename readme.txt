@@ -74,6 +74,10 @@ cURL extension is required (extension=php_curl.dll)
 You can find how to get Document GUID [here](http://groupdocs.com/docs/pages/viewpage.action?pageId=1409575)
 
 == Changelog ==
+= 1.3.6 =
+* Fix no iframe bug.
+
+== Changelog ==
 = 1.3.5 =
 * Updated GroupDocs SDK.
 
