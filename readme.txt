@@ -112,4 +112,12 @@ You can find how to get Document GUID [here](http://groupdocs.com/docs/pages/vie
 * Fixed 2 path related bugs.
 
 = 1.0 =
-* Initial release.
+* Initial release.appended text
+
+
+
+
+
+
+
+
