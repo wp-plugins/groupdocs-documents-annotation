@@ -1,53 +1,77 @@
-=== GroupDocs Word, Excel, Powerpoint, Image and PDF Annotate ===
+=== GroupDocs Document and Image Annotation Plugin ===
 Contributors: GroupDocs Team
-Tags: annotation, doc, docx, pdf, ppt, pptx, xls, xlsx, groupdocs, powerpoint, excel, word, acrobat, plugin, image, page, comments
-Author URI: http://groupdocs.com
+Tags: groupdocs, groupdocs plugin, groupdocs annotation, annotate pdf, pdf annotation, annotate documents
+Author URI: http://groupdocs.com/apps/annotation
 Requires at least: 2.8
 Tested up to: 3.5.0
 Stable tag: trunk 
 License: GPLv2
 
 
-Lets you embed the GroupDocs Annotation into Wordpress to annotate your documents directly in WordPress website.
+Annotate PDF, Word, Excel, PowerPoint documents and images online, right on your website.
 
 == Description ==
 
-GroupDocs Annotation lets you embed several types of files into your WordPress pages using the GroupDocs Viewer - allowing inline viewing and annotation of the following file types, with no Flash or PDF browser plug-ins required: 
+GroupDocs Annotation Plugin lets you embed different types of documents and images into your website and then invite your colleagues and clients to view and annotate them online, without the need to install any document editors or browser plugins.
 
-* Adobe Acrobat (PDF)
+While modern document editors have built-in tools for annotating documents through comments and tracking changes, the conventional way of working on documents has become too slow and bulky for today’s business pace. New cloud services such as GroupDocs Annotation streamline this process and offer new and more efficient ways of collaborating with your team.  
 
-* Microsoft Word (DOC/DOCX)
+= No need to install any document editors. =  
 
-* Microsoft Excel (XLS/XLSX)
+While it may still be okay to ask your team members to install the same piece of software to work on documents and images together, you don’t want to force your clients to do the same if they need just to review and annotate a PDF document, for example. Rather than offering them to find and install a PDF annotation tool, you can invite them to do this on your website with a usual web browser without any special plugins. 
 
-* Microsoft PowerPoint (PPT/PPTX)
+= No compatibility issues. =
 
+Even if your team members already have document and image editors for other tasks, they may prefer different types of software, which may cause compatibility problems. With GroupDocs Annotation you can be sure that your colleagues and partners will see your document exactly the way you see it on your computer. 
 
+= Real-time collaboration. = 
 
-GroupDocs Annotation lets you view and comment on documents online. Its document annotation features makes it a powerful tool for collaboration. You and your colleagues can collaborate on a document, at the same time, to improve communication and speed up document reviews. GroupDocs Annotation lets you work with text-based documents as well as images. You can collaborate on layouts, drawings and designs just as effectively as on articles, stories and corporate documents. In short GroupDocs Annotation lets you [annotate](http://groupdocs.com/apps/annotation) on many file formats including PDF's, Word documents, Excel documents, Powerpoint documents and many other available formats.
+Instead of waiting for an e-mail from each of your team members with their feedback on a document, you can invite them to annotate it on your website in real time. This can make a difference if you have a close deadline and need to get feedback and approval instantly. 
 
-To use our plugin you need UserId and ApiKey to cofigure the plugin. How and where you can find them  please check in [GroupDocs FAQ](http://groupdocs.com/docs/pages/viewpage.action?pageId=1409573)
+= Absolutely mobile. = 
 
+Now you don’t need to check your e-mail, then download the attached document and open it in a specific program to be able to view and annotate it. GroupDocs Annotation will allow you to do this on any mobile device while you are on the go. 
 
-= How Document Annotation Works =
-GroupDocs Annotation has a simple document annotation workflow: upload a Microsoft Word or PDF file to the dashboard, select it and got to the GroupDocs Annotation app. Share the document with colleagues so that they too can annotate it. You can now add comments to the document. When the review is complete, save the document with Microsoft Word comments so that you can edit by simply accepting or rejecting changes.
+= Different types of documents and images supported. =
 
+GroupDocs Annotation plugin allows you to [annotate PDF documents](http://groupdocs.com/apps/annotation), Excel spreadsheets, word-processing documents, PowerPoint presentations and image files (JPG, BMP, GIF, TIFF) online. 
 
+------------------------------
+
+= HOW THIS WORKS = 
+
+1. At first, you will need to sign up with GroupDocs on [our website](http://groupdocs.com/apps/annotation). We offer a 14-day free trial, so you will be able to test everything fully – not only the online PDF annotation tool, but also many other useful apps that come in a single package. 
+2. Install the plugin using this [detailed step-by-step instruction](http://groupdocs.com/docs/display/annotation/Integrating+the+Plugin+Through+WordPress+UI).  
+3. Embed the necessary documents and images into your website using the installed plugin. 
+4. Annotate the documents yourself or invite your colleagues or clients to annotate them on your website.
+5. After viewing all annotations online in your browser, you will be able to print the documents or export them into a PDF file with all comments saved as markers throughout the text. 
+
+'''See a LIVE DEMO of how a document can be embedded and annotated on a web-page:'''  
+[http://groupdocs.com/apps/annotation/try-it-now](http://groupdocs.com/apps/annotation/try-it-now)
+
+'''Need more help? [Contact us.](http://groupdocs.com/corporate/contact)'''
 
 
 == Installation ==
 
-= Manual installation =
+= Installing the plugin =
 
 1. Upload the entire `groupdocs-documents-annotation` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the `Plugins` menu in WordPress.
 3. Done.
 
-Upload the documents to your GroupDocs account. Use the GroupDocs Annotation Embedder button in the Visual editor to build the appropriate shortcode by copy&pasting the document groupdocs.com link.
+= Embedding a document to a web-page = 
+ 
+1. Upload a document to your GroupDocs account.
+2. Use the GroupDocs Annotation Embed button in the Visual editor to build an appropriate shortcode by coping & pasting the document's link.
 
-The other way to embed the document is to upload it via this plugin to your groupdocs.com account then the shortcode will be automatically generated and inserted to the content of the post.
+An alternative way to embed a document is to upload it via the plugin to your groupdocs.com account. A shortcode will be automatically generated and inserted to the content of the post.
 
-Be aware that to upload the document with this plugin to your groupdocs.com account you will have to input the  User Id and Private Key, which can be found at the bottom of the profile in the GroupDocs dashboard (click icon in the top right of the header to view the profile). It will then be stored in the Plugin Settings.
+Be aware that in order to upload a document via the plugin, you will need to enter your User Id and Private Key, which can be found at the bottom of your profile details in the GroupDocs dashboard (click on the icon in the top right corner of the header to view your profile). 
+
+'''For more details on how to install and use the plugin, please see our [help page]( http://groupdocs.com/docs/display/annotation/Integrating+the+Plugin+Through+WordPress+UI)''' 
+
+'''Need more help? [Contact us.](http://groupdocs.com/corporate/contact)'''
 
 == Screenshots ==
 
@@ -59,19 +83,19 @@ Be aware that to upload the document with this plugin to your groupdocs.com acco
 
 == Frequently Asked Questions ==
 
-= How can I get detailed help =
+= Where can I find more info on how to install and use the plugin? =
 
-For further help you may choose any of following options:
+For detailed instructions on how to install and use the plugin, please see our [help page](http://groupdocs.com/docs/display/annotation/Integrating+the+Plugin+Through+WordPress+UI) 
 
-* You can also contact us by various means as mentioned on our [Contact Us](http://groupdocs.com/about/contact/) page.
+Also, please feel free to [contact us](http://groupdocs.com/corporate/contact) for any additional help.
 
 = Are there any specific PHP extensions that should be enabled?  =
 
 cURL extension is required (extension=php_curl.dll)
 
-= How to get Document ID (GUID) =
+= How can I get a Document ID (GUID) =
 
-You can find how to get Document GUID [here](http://groupdocs.com/docs/pages/viewpage.action?pageId=1409575)
+Please see [this page](http://groupdocs.com/docs/pages/viewpage.action?pageId=1409575) for a detailed instruction.
 
 == Changelog ==
 = 1.3.6 =
@@ -112,13 +136,4 @@ You can find how to get Document GUID [here](http://groupdocs.com/docs/pages/vie
 * Fixed 2 path related bugs.
 
 = 1.0 =
-* Initial release.appended text
-
-
-
-
-
-
-
-
-
+* Initial release.
