@@ -98,10 +98,6 @@ cURL extension is required (extension=php_curl.dll)
 Please see [this page](http://groupdocs.com/docs/pages/viewpage.action?pageId=1409575) for a detailed instruction.
 
 == Changelog ==
-
-= 1.3.7 =
-* Update SDK.
-
 = 1.3.6 =
 * Fix no iframe bug.
 
@@ -141,8 +137,6 @@ Please see [this page](http://groupdocs.com/docs/pages/viewpage.action?pageId=14
 
 = 1.0 =
 * Initial release.
-
-
 
 
 
