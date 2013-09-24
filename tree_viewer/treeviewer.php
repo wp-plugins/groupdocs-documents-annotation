@@ -33,7 +33,8 @@ if( empty($_GET['private_key']) || empty($_GET['user_id']) ) {
         $files = $result->result->files;
         $folders = $result->result->folders;
     } catch (Exception $e) {
-        echo $e->getMessage();
+        echo "<div >You provided incorrect Client Id or API Key. Please check the configuration</div>";
+		echo $e->getMessage();
     }
 
     print("<ul class=\"jqueryFileTree\" style=\"display: ;\">");

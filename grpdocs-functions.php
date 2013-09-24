@@ -1,6 +1,6 @@
 <?php
 
-if ( ! defined( 'grpdocs_annotation_PLUGIN_URL' ) )  define( 'grpdocs_annotation_PLUGIN_URL', WP_PLUGIN_URL . '/groupdocs-documents-annotation');
+if ( ! defined( 'grpdocs_annotation_PLUGIN_URL' ) )  define( 'grpdocs_annotation_PLUGIN_URL', WP_PLUGIN_URL . '/groupdocs-annotation');
 
 function grpdocs_annotation_getGuid($link) {
     preg_match('/([0-9a-f]){64}/', $link, $matches);

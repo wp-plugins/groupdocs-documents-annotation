@@ -56,7 +56,7 @@ GroupDocs Annotation plugin allows you to [annotate PDF documents](http://groupd
 
 = Installing the plugin =
 
-1. Upload the entire `groupdocs-documents-annotation` folder to the `/wp-content/plugins/` directory.
+1. Upload the entire `groupdocs-annotation` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the `Plugins` menu in WordPress.
 3. Done.
 
