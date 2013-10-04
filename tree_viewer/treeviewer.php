@@ -11,7 +11,7 @@ if( empty($_GET['private_key']) || empty($_GET['user_id']) ) {
     include_once(dirname(__FILE__) . '/lib/groupdocs-php/StorageApi.php');
     include_once(dirname(__FILE__) . '/lib/groupdocs-php/GroupDocsRequestSigner.php');
 
-    $path = $_POST['dir'];
+    $path = urldecode($_POST['dir']);
     if ($path == NULL || $path == "/") {
         $path = "";
     } 
