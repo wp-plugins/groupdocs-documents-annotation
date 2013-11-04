@@ -15,9 +15,9 @@ error_reporting(E_ALL | E_STRICT);
 	<script type="text/javascript" src="js/tiny_mce_popup.js"></script>
 	<script type="text/javascript" src="js/grpdocs-dialog.js"></script>
 	
-	<script type="text/javascript" src="tree_viewer/lib/jquery_file_tree/jquery.file_tree.js"></script>
-	<script type="text/javascript" src="tree_viewer/js/tree_viewer_page.js"></script>
-	<link href="tree_viewer/lib/jquery_file_tree/jquery.file_tree.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="tree_annotation/lib/jquery_file_tree/jquery.file_tree.js"></script>
+	<script type="text/javascript" src="tree_annotation/js/tree_annotation_page.js"></script>
+	<link href="tree_annotation/lib/jquery_file_tree/jquery.file_tree.css" type="text/css" rel="stylesheet" />
 	
 	<link href="css/grpdocs-dialog.css" type="text/css" rel="stylesheet" />
 
@@ -136,10 +136,10 @@ define("UPLOAD_ERR_EMPTY",5);
 	} else {
 	
 
-		include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/APIClient.php');
-    	include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/StorageApi.php');
-    	include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/GroupDocsRequestSigner.php');
-		include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/FileStream.php');
+		include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/APIClient.php');
+    	include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/StorageApi.php');
+    	include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/GroupDocsRequestSigner.php');
+		include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/FileStream.php');
 
 		$uploads_dir = dirname(__FILE__);
 
@@ -152,7 +152,7 @@ define("UPLOAD_ERR_EMPTY",5);
     	$apiClient = new APIClient($signer);
     	$api = new StorageApi($apiClient);
 
-		$result = $api->Upload($_POST['userId'], $name, 'uploaded', null, $fs);
+		$result = $api->Upload($_POST['userId'], $name, 'uploaded', null, $fs);      
 		echo"<script>
 			tinyMCEPopup.editor.execCommand('mceInsertContent', false, '[grpdocsannotation file=\"" . @$result->result->guid . "\" height=\"{$_POST['height']}\" width=\"{$_POST['width']}\"]');
 			tinyMCEPopup.close();</script>";

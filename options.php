@@ -11,10 +11,10 @@
 if (isset ($_POST['login']) && ($_POST['password'])) {
     $login = trim($_POST['login']);
     $password = trim($_POST['password']);
-    include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/APIClient.php');
-    include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/StorageApi.php');
-    include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/GroupDocsRequestSigner.php');
-    include_once(dirname(__FILE__) . '/tree_viewer/lib/groupdocs-php/FileStream.php');
+    include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/APIClient.php');
+    include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/StorageApi.php');
+    include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/GroupDocsRequestSigner.php');
+    include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/FileStream.php');
     if ($basePath == "") {
         //If base base is empty seting base path to prod server
         $basePath = 'https://api.groupdocs.com/v2.0';
