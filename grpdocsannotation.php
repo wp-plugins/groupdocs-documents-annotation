@@ -6,7 +6,7 @@ Plugin URI: http://www.groupdocs.com/
 Description: Annotate PDF, Word, Excel, PowerPoint documents and images online, right on your website.
 Author: GroupDocs Team <support@groupdocs.com>
 Author URI: http://www.groupdocs.com/
-Version: 1.3.6
+Version: 1.3.7
 License: GPLv2
 */
 
