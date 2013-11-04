@@ -47,11 +47,11 @@ if( empty($_GET['private_key']) || empty($_GET['user_id']) ) {
     if(!empty($files)){
         foreach ($files as $item) {
                 $href = $item->guid;
-                //$url = "https://apps.groupdocs.com/document-annotation/embed/{$href}";
-                //$url = $signer->signUrl($url);
-                //$signature = explode("=", $url);
+                $url = "https://apps.groupdocs.com/document-annotation/embed/{$href}";
+                $url = $signer->signUrl($url);
+                $signature = explode("=", $url);
                 print("<li class=\"file ext_" . strtolower($item->file_type) . "\"><a class='iframe' href='" . $href . "' rel=\"" .
-                            $item->guid . "\">" . $item->name . "</a></li>");
+                            $item->guid . "?signature=" . $signature[1]. "\">" . $item->name . "</a></li>");
         }
     }
     print("</ul>");

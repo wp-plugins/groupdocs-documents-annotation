@@ -153,11 +153,11 @@ define("UPLOAD_ERR_EMPTY",5);
     	$api = new StorageApi($apiClient);
 
 		$result = $api->Upload($_POST['userId'], $name, 'uploaded', null, $fs);
-        //$url = "https://apps.groupdocs.com/document-annotation/embed/{$result->result->guid}";
-        //$url = $signer->signUrl($url);
-        //$signature = explode("=", $url);
+        $url = "https://apps.groupdocs.com/document-annotation/embed/{$result->result->guid}";
+        $url = $signer->signUrl($url);
+        $signature = explode("=", $url);
 		echo"<script>
-			tinyMCEPopup.editor.execCommand('mceInsertContent', false, '[grpdocsannotation file=\"" . @$result->result->guid . "\" height=\"{$_POST['height']}\" width=\"{$_POST['width']}\"]');
+			tinyMCEPopup.editor.execCommand('mceInsertContent', false, '[grpdocsannotation file=\"" . @$result->result->guid . "?signature=" . @$signature[1]  . "\" height=\"{$_POST['height']}\" width=\"{$_POST['width']}\"]');
 			tinyMCEPopup.close();</script>";
 		die;
 	}
