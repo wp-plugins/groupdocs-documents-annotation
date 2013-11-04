@@ -46,7 +46,7 @@ if( empty($_GET['private_key']) || empty($_GET['user_id']) ) {
     }
     if(!empty($files)){
         foreach ($files as $item) {
-                $href = $item->guid;
+                $href = $item->guid;                
                 print("<li class=\"file ext_" . strtolower($item->file_type) . "\"><a class='iframe' href='" . $href . "' rel=\"" .
                             $item->guid . "\">" . $item->name . "</a></li>");
         }

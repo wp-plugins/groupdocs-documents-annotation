@@ -17,7 +17,7 @@ function loadFileTree($){
 	var container = $("#groupdocsBrowserInner", parent);
 	
 	var opts = {
-		script: 'tree_viewer/treeviewer.php?private_key=' + private_key + '&user_id=' + user_id,
+		script: 'tree_annotation/treeannotation.php?private_key=' + private_key + '&user_id=' + user_id,
 		onTreeShow: function(){
 
 		},
