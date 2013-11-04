@@ -3,7 +3,7 @@
 /*
 Plugin Name: GroupDocs Annotation Embedder
 Plugin URI: http://www.groupdocs.com/
-Description: Annotate PDF, Word, Excel, PowerPoint documents and images online, right on your website.
+Description: Lets you embed PPT, PPTX, XLS, XLSX, DOC, DOCX, PDF and many other formats from your GroupDocs acount in a web page using the GroupDocs Embedded Viewer (no Flash or PDF browser plug-ins required).
 Author: GroupDocs Team <support@groupdocs.com>
 Author URI: http://www.groupdocs.com/
 Version: 1.3.6
