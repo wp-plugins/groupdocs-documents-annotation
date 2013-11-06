@@ -6,8 +6,8 @@
     }
 
     	// Get GroupDocs plug-in options from database.
-    $userId     = get_option('userId');
-    $privateKey = get_option('privateKey');
+    $userId     = get_option('annotation_userId');
+    $privateKey = get_option('annotation_privateKey');
 if (isset ($_POST['login']) && ($_POST['password'])) {
     $login = trim($_POST['login']);
     $password = trim($_POST['password']);
@@ -51,8 +51,8 @@ if (isset ($_POST['login']) && ($_POST['password'])) {
 		$userId     = trim($_POST['userId']);
 		$privateKey = trim($_POST['privateKey']);
 
-		update_option( 'userId', $userId);
-		update_option( 'privateKey', $privateKey);
+		update_option( 'annotation_userId', $userId);
+		update_option( 'annotation_privateKey', $privateKey);
 
         // Display an 'updated' message.
 		?>

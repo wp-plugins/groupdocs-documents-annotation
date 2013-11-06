@@ -97,6 +97,8 @@ var GrpdocsInsertDialog = {
 	insert : function() {
         if($('#file').val()) {
             $('#form').submit();
+        } else if ( $('#url').val()) {
+            $('#form').submit();
         } else {
             // insert the contents from the input into the document
             tinyMCEPopup.editor.execCommand('mceInsertContent', false, jQuery('#shortcode').val());

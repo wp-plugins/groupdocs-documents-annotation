@@ -3,7 +3,7 @@
 /*
 Plugin Name: GroupDocs Annotation Embedder
 Plugin URI: http://www.groupdocs.com/
-Description: Annotate PDF, Word, Excel, PowerPoint documents and images online, right on your website.
+Description: GroupDocs Annotation Plugin lets you embed different types of documents and images into your website and then invite your colleagues and clients to view and annotate them online, without the need to install any document editors or browser plugins.
 Author: GroupDocs Team <support@groupdocs.com>
 Author URI: http://www.groupdocs.com/
 Version: 1.3.7
@@ -59,6 +59,15 @@ add_action('admin_init','grpdocs_annotation_mce_addbuttons');
 
 // add an option page
 add_action('admin_menu', 'grpdocs_annotation_option_page');
+
+register_uninstall_hook( __FILE__, 'groupdocs_annotation_deactivate' );
+
+function groupdocs_annotation_deactivate()
+{
+	delete_option('annotation_userId');
+	delete_option('annotation_privateKey');	
+
+}
 function grpdocs_annotation_option_page() {
 	global $grpdocs_annotation_settings_page;
 

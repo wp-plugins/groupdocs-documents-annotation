@@ -28,12 +28,12 @@ error_reporting(E_ALL | E_STRICT);
 <table>  
   <tr>
     <td align="right" class="gray dwl_gray"><strong>Client Id</strong><br /></td>
-    <td valign="top"><input name="userId" type="text" class="opt dwl" id="userId" style="width:200px;" value="<?php echo get_option('userId'); ?>" /><br/>
+    <td valign="top"><input name="userId" type="text" class="opt dwl" id="userId" style="width:200px;" value="<?php echo get_option('annotation_userId'); ?>" /><br/>
 	<span id="uri-note"></span></td>
   </tr>
   <tr>
     <td align="right" class="gray dwl_gray"><strong>API Key</strong><br /></td>
-    <td valign="top"><input name="privateKey" type="text" class="opt dwl" id="privateKey" style="width:200px;" value="<?php echo get_option('privateKey'); ?>" /><br/>
+    <td valign="top"><input name="privateKey" type="text" class="opt dwl" id="privateKey" style="width:200px;" value="<?php echo get_option('annotation_privateKey'); ?>" /><br/>
 	<span id="uri-note"></span></td>
   </tr>
   <tr>
@@ -52,7 +52,7 @@ error_reporting(E_ALL | E_STRICT);
 <ul class="tabs">
 	<li class="current">Browse &amp; Embed</li>
 	<li>Upload &amp; Embed</li>
-	<li>Paste Link</li>
+	<li>Paste GUID</li>
 </ul>
 
 <div class="box visible">
@@ -96,7 +96,10 @@ error_reporting(E_ALL | E_STRICT);
 </fieldset>
 	<div class="mceActionPanel">
 		<div style="float: left">
-			<input type="button" id="insert" name="insert" value="Insert" onclick="GrpdocsInsertDialog.insert();" />
+			<input type="button" id="insert" name="insert" value="Insert" onclick="GrpdocsInsertDialog.insert();" <?php
+            if (get_option("annotation_userId") == null)
+            { echo 'disabled';}
+            ?>/>
 			
 		</div>
 
@@ -161,4 +164,27 @@ define("UPLOAD_ERR_EMPTY",5);
 			tinyMCEPopup.close();</script>";
 		die;
 	}
+}
+
+if(!empty($_POST) && !empty($_POST['url'])) {
+
+    include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/APIClient.php');
+    include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/StorageApi.php');
+    include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/GroupDocsRequestSigner.php');
+    include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/FileStream.php');
+
+
+    $signer = new GroupDocsRequestSigner(trim($_POST['privateKey']));
+    $apiClient = new APIClient($signer);
+    $api = new StorageApi($apiClient);
+    $guid = $_POST['url'];
+
+    $url = "https://apps.groupdocs.com/document-annotation/embed/{$guid}";
+    $url = $signer->signUrl($url);
+    $signature = explode("=", $url);
+    echo"<script>
+			tinyMCEPopup.editor.execCommand('mceInsertContent', false, '[grpdocsannotation file=\"" . @$guid . "?signature=" . @$signature[1]  . "\" height=\"{$_POST['height']}\" width=\"{$_POST['width']}\"]');
+			tinyMCEPopup.close();</script>";
+    die;
+
 }

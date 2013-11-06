@@ -26,6 +26,7 @@ function loadFileTree($){
 			$("a", container).each(function() {
 				var self = $(this);
 				if(self.parent().hasClass("file")) {
+				    document.getElementById('insert').disabled = false;
 					self.click(function(e){
 						e.preventDefault();
 						var height = parseInt($('#height').val());
