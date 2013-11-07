@@ -6,7 +6,7 @@ Plugin URI: http://www.groupdocs.com/
 Description: GroupDocs Annotation Plugin lets you embed different types of documents and images into your website and then invite your colleagues and clients to view and annotate them online, without the need to install any document editors or browser plugins.
 Author: GroupDocs Team <support@groupdocs.com>
 Author URI: http://www.groupdocs.com/
-Version: 1.3.7
+Version: 1.3.8
 License: GPLv2
 */
 
