@@ -59,7 +59,7 @@ error_reporting(E_ALL | E_STRICT);
 	<strong>Select File</strong><br />
 	<span id="groupdocs_keys_error" style="display:none">WARNING: There is no user id and/or private key
 		please enter them on GroupDocs Options page
-		or fill marked fields and press <a href="#" onclick='loadFileTree(jQuery);return false'>reload</a>
+		or fill marked fields and press
 	</span>
 	
     <div id="groupdocsBrowser">
@@ -151,40 +151,16 @@ define("UPLOAD_ERR_EMPTY",5);
 		$fs = FileStream::fromFile($tmp_name);
 
 
-		$signer = new GroupDocsRequestSigner(trim($_POST['privateKey']));
+		$signer = new GroupDocsRequestSigner(strip_tags(trim($_POST['privateKey'])));
     	$apiClient = new APIClient($signer);
     	$api = new StorageApi($apiClient);
+        $width = (int) $_POST['width'];
+        $height = (int) $_POST['height'];
+		$result = $api->Upload(strip_tags(trim($_POST['userId'])), $name, 'uploaded', null, $fs);
 
-		$result = $api->Upload($_POST['userId'], $name, 'uploaded', null, $fs);
-        $url = "https://apps.groupdocs.com/document-annotation/embed/{$result->result->guid}";
-        $url = $signer->signUrl($url);
-        $signature = explode("=", $url);
 		echo"<script>
-			tinyMCEPopup.editor.execCommand('mceInsertContent', false, '[grpdocsannotation file=\"" . @$result->result->guid . "?signature=" . @$signature[1]  . "\" height=\"{$_POST['height']}\" width=\"{$_POST['width']}\"]');
+			tinyMCEPopup.editor.execCommand('mceInsertContent', false, '[grpdocsannotation file=\"" . @$result->result->guid . "\" height=\"{$height}\" width=\"{$width}\"]');
 			tinyMCEPopup.close();</script>";
 		die;
 	}
-}
-
-if(!empty($_POST) && !empty($_POST['url'])) {
-
-    include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/APIClient.php');
-    include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/StorageApi.php');
-    include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/GroupDocsRequestSigner.php');
-    include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/FileStream.php');
-
-
-    $signer = new GroupDocsRequestSigner(trim($_POST['privateKey']));
-    $apiClient = new APIClient($signer);
-    $api = new StorageApi($apiClient);
-    $guid = $_POST['url'];
-
-    $url = "https://apps.groupdocs.com/document-annotation/embed/{$guid}";
-    $url = $signer->signUrl($url);
-    $signature = explode("=", $url);
-    echo"<script>
-			tinyMCEPopup.editor.execCommand('mceInsertContent', false, '[grpdocsannotation file=\"" . @$guid . "?signature=" . @$signature[1]  . "\" height=\"{$_POST['height']}\" width=\"{$_POST['width']}\"]');
-			tinyMCEPopup.close();</script>";
-    die;
-
 }

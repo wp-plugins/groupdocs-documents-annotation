@@ -98,15 +98,21 @@ cURL extension is required (extension=php_curl.dll)
 Please see [this page](http://groupdocs.com/docs/pages/viewpage.action?pageId=1409575) for a detailed instruction.
 
 == Changelog ==
+
+= 1.3.9 =
+* Minor security fixes.
+
 = 1.3.8 =
-* Fix bugs to add the signature in url.
+* Add signature from url iframe.
 
 = 1.3.7 =
-* Add signature in url.
+* Updated GroupDocs SDK.
+* Minor bug fixes.
 
 = 1.3.6 =
 * Fix no iframe bug.
 
+== Changelog ==
 = 1.3.5 =
 * Updated GroupDocs SDK.
 
@@ -142,4 +148,13 @@ Please see [this page](http://groupdocs.com/docs/pages/viewpage.action?pageId=14
 
 = 1.0 =
 * Initial release.
+
+
+
+
+
+
+
+
+
 

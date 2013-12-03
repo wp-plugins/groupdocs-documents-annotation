@@ -55,21 +55,24 @@ var GrpdocsInsertDialog = {
 				jQuery('#url').blur(function(){
 					update_sc();
 				});
-		
-		function update_sc() {
+        function strip_tags(str){
+            return str.replace(/<\/?[^>]+>/gi, '');
+        };
+
+        function update_sc() {
 			 shortcode = 'grpdocsannotation';
 			 
 				if (( jQuery('#url').val() !=0 ) & ( jQuery('#url').val() ) !=null) {
-					shortcode = shortcode + '  file="'+jQuery('#url').val()+'"';
+					shortcode = shortcode + '  file="'+strip_tags(jQuery('#url').val())+'"';
 				} else if ( jQuery('#url').val() == '' ) {
 					jQuery('#uri-note').html('');
 					shortcode = shortcode + ' file=""';
 				}
 				if (( jQuery('#height').val() !=0 ) & ( jQuery('#height').val() ) !=null) {
-					shortcode = shortcode + '  height="'+jQuery('#height').val()+'"';
+					shortcode = shortcode + '  height="'+strip_tags(jQuery('#height').val())+'"';
 				}
 				if (( jQuery('#width').val() !=0 ) & ( jQuery('#width').val() ) !=null) {
-					shortcode = shortcode + '  width="'+jQuery('#width').val()+'"';
+					shortcode = shortcode + '  width="'+strip_tags(jQuery('#width').val())+'"';
 				}
 				
 				if ( jQuery("input[@name'save']:checked").val() == '1') {
@@ -96,8 +99,6 @@ var GrpdocsInsertDialog = {
 	},
 	insert : function() {
         if($('#file').val()) {
-            $('#form').submit();
-        } else if ( $('#url').val()) {
             $('#form').submit();
         } else {
             // insert the contents from the input into the document
