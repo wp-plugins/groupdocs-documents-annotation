@@ -99,6 +99,9 @@ Please see [this page](http://groupdocs.com/docs/pages/viewpage.action?pageId=14
 
 == Changelog ==
 
+= 1.3.10 =
+* Updated GroupDocs SDK to version 1.8.2
+
 = 1.3.9 =
 * Minor security fixes.
 
@@ -148,4 +151,13 @@ Please see [this page](http://groupdocs.com/docs/pages/viewpage.action?pageId=14
 
 = 1.0 =
 * Initial release.
+
+
+
+
+
+
+
+
+
 
