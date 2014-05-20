@@ -29,6 +29,10 @@ function loadFileTree($){
 				    document.getElementById('insert').disabled = false;
 					self.click(function(e){
 						e.preventDefault();
+                        if($("a", container).attr('style', 'border')){
+                            $("a", container).removeAttr('style')
+                        }
+                        self.css( 'border', '3px solid red' );
 						var height = parseInt($('#height').val());
 						var width =  parseInt($('#width').val());
 						$('#shortcode').val('[grpdocsannotation file="' + self.attr('rel') + '" width="' + width + '" height="' +  height + '"]');

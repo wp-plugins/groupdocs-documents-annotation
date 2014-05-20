@@ -6,7 +6,7 @@ Plugin URI: http://www.groupdocs.com/
 Description: GroupDocs Annotation Plugin lets you embed different types of documents and images into your website and then invite your colleagues and clients to view and annotate them online, without the need to install any document editors or browser plugins.
 Author: GroupDocs Team <support@groupdocs.com>
 Author URI: http://www.groupdocs.com/
-Version: 1.3.10
+Version: 1.3.11
 License: GPLv2
 */
 
@@ -35,7 +35,7 @@ function grpdocs_annotation_getdocument($atts) {
         $signer = new GroupDocsRequestSigner(get_option('signature_userId'));
     }
 
-	$url = "https://apps.groupdocs.com/document-annotation2/embed/{$file}?referer=wordpress-annotation/1.3.9&use_pdf=true";
+	$url = "https://apps.groupdocs.com/document-annotation2/embed/{$file}?referer=wordpress-annotation/1.3.11&use_pdf=true";
 
     $code_url = $signer->signUrl($url);
 

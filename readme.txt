@@ -3,7 +3,7 @@ Contributors: GroupDocs Team
 Tags: groupdocs, groupdocs plugin, groupdocs annotation, annotate pdf, pdf annotation, annotate documents
 Author URI: http://groupdocs.com/apps/annotation
 Requires at least: 2.8
-Tested up to: 3.5.0
+Tested up to: 3.9.0
 Stable tag: trunk 
 License: GPLv2
 
@@ -98,6 +98,9 @@ cURL extension is required (extension=php_curl.dll)
 Please see [this page](http://groupdocs.com/docs/pages/viewpage.action?pageId=1409575) for a detailed instruction.
 
 == Changelog ==
+
+= 1.3.11 =
+* Minor bug fixes.(Support Wordpress version 3.9)
 
 = 1.3.10 =
 * Updated GroupDocs SDK to version 1.8.2
