@@ -41,15 +41,15 @@ GroupDocs Annotation plugin allows you to [annotate PDF documents](http://groupd
 = HOW THIS WORKS = 
 
 1. At first, you will need to sign up with GroupDocs on [our website](http://groupdocs.com/apps/annotation). We offer a 14-day free trial, so you will be able to test everything fully – not only the online PDF annotation tool, but also many other useful apps that come in a single package. 
-2. Install the plugin using this [detailed step-by-step instruction](http://groupdocs.com/docs/display/annotation/Integrating+the+Plugin+Through+WordPress+UI).  
+2. Install the plugin using this [detailed step-by-step instruction](http://groupdocs.com/docs/display/annotation/Integrating+GroupDocs+Annotation+Plugin+Version+1.2.1+for+WordPress).  
 3. Embed the necessary documents and images into your website using the installed plugin. 
 4. Annotate the documents yourself or invite your colleagues or clients to annotate them on your website.
 5. After viewing all annotations online in your browser, you will be able to print the documents or export them into a PDF file with all comments saved as markers throughout the text. 
 
 '''See a LIVE DEMO of how a document can be embedded and annotated on a web-page:'''  
-[http://groupdocs.com/apps/annotation/try-it-now]( http://groupdocs.com/apps/annotation/try-it-now )
+[http://groupdocs.com/apps/annotation]( http://groupdocs.com/apps/annotation )
 
-''' Need more help? [Contact us.](http://groupdocs.com/corporate/contact) '''
+''' Need more help? [Contact us.](http://groupdocs.com/corporate/contact-us) '''
 
 
 == Installation ==
@@ -69,9 +69,9 @@ An alternative way to embed a document is to upload it via the plugin to your gr
 
 Be aware that in order to upload a document via the plugin, you will need to enter your User Id and Private Key, which can be found at the bottom of your profile details in the GroupDocs dashboard (click on the icon in the top right corner of the header to view your profile). 
 
-'''For more details on how to install and use the plugin, please see our [help page]( http://groupdocs.com/docs/display/annotation/Integrating+the+Plugin+Through+WordPress+UI)''' 
+'''For more details on how to install and use the plugin, please see our [help page]( http://groupdocs.com/docs/display/annotation/Integrating+GroupDocs+Annotation+Plugin+Version+1.2.1+for+WordPress)''' 
 
-'''Need more help? [Contact us.]( http://groupdocs.com/corporate/contact )'''
+'''Need more help? [Contact us.]( http://groupdocs.com/corporate/contact-us )'''
 
 == Screenshots ==
 
@@ -85,9 +85,9 @@ Be aware that in order to upload a document via the plugin, you will need to ent
 
 = Where can I find more info on how to install and use the plugin? =
 
-For detailed instructions on how to install and use the plugin, please see our [help page](http://groupdocs.com/docs/display/annotation/Integrating+the+Plugin+Through+WordPress+UI) 
+For detailed instructions on how to install and use the plugin, please see our [help page](http://groupdocs.com/docs/display/annotation/Integrating+GroupDocs+Annotation+Plugin+Version+1.2.1+for+WordPress) 
 
-Also, please feel free to [contact us](http://groupdocs.com/corporate/contact) for any additional help.
+Also, please feel free to [contact us](http://groupdocs.com/corporate/contact-us) for any additional help.
 
 = Are there any specific PHP extensions that should be enabled?  =
 
@@ -95,7 +95,7 @@ cURL extension is required (extension=php_curl.dll)
 
 = How can I get a Document ID (GUID) =
 
-Please see [this page](http://groupdocs.com/docs/pages/viewpage.action?pageId=1409575) for a detailed instruction.
+Please see [this page](http://groupdocs.com/docs/display/Viewer/How+to+Get+the+GUID+Or+Document+ID) for a detailed instruction.
 
 == Changelog ==
 
