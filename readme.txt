@@ -47,7 +47,7 @@ GroupDocs Annotation plugin allows you to [annotate PDF documents](http://groupd
 5. After viewing all annotations online in your browser, you will be able to print the documents or export them into a PDF file with all comments saved as markers throughout the text. 
 
 '''See a LIVE DEMO of how a document can be embedded and annotated on a web-page:'''  
-[http://groupdocs.com/apps/annotation]( http://groupdocs.com/apps/annotation )
+[ http://groupdocs.com/apps/annotation ]( http://groupdocs.com/apps/annotation )
 
 ''' Need more help? [Contact us.](http://groupdocs.com/corporate/contact-us) '''
 
@@ -69,7 +69,7 @@ An alternative way to embed a document is to upload it via the plugin to your gr
 
 Be aware that in order to upload a document via the plugin, you will need to enter your User Id and Private Key, which can be found at the bottom of your profile details in the GroupDocs dashboard (click on the icon in the top right corner of the header to view your profile). 
 
-'''For more details on how to install and use the plugin, please see our [help page]( http://groupdocs.com/docs/display/annotation/Integrating+GroupDocs+Annotation+Plugin+Version+1.2.1+for+WordPress)''' 
+'''For more details on how to install and use the plugin, please see our [help page]( http://groupdocs.com/docs/display/annotation/Integrating+GroupDocs+Annotation+Plugin+Version+1.2.1+for+WordPress) ''' 
 
 '''Need more help? [Contact us.]( http://groupdocs.com/corporate/contact-us )'''
 
