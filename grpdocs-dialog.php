@@ -49,6 +49,17 @@ if (file_exists('../../../wp-includes/js/tinymce/tiny_mce_popup.js')){
     <td valign="top"><input name="width" type="text" class="opt dwl" id="width" size="6" style="text-align:right" value="600" />px</td>
   </tr>
 </table>
+<div id="collaborator">
+    <strong>Collaborator email:</strong><br><input name="email" type="text" class="opt dwl" id="email" style="width:200px;"/>
+    <table>
+        <tr>
+            <td><strong>CanView: </strong><input type="checkbox" name="can_view" id="can_view"></td>
+            <td><strong style="margin-left: 20px">CanAnnotate: </strong><input type="checkbox" name="can_annotate" id="can_annotate"></td>
+            <td><strong style="margin-left: 20px">CanDownload: </strong><input type="checkbox" name="can_download" id="can_download"></td>
+            <td><strong style="margin-left: 20px">CanExport: </strong><input type="checkbox" name="can_export" id="can_export"></td>
+        </tr>
+    </table>
+</div>
 
 
 <div class="section">
@@ -93,7 +104,7 @@ if (file_exists('../../../wp-includes/js/tinymce/tiny_mce_popup.js')){
     <td colspan="2">
     <br />
     Shortcode Preview
-    <textarea name="shortcode" cols="72" rows="2" id="shortcode"></textarea>
+    <textarea name="shortcode" cols="72" rows="5" id="shortcode"></textarea>
     </td>
 	</tr>
    </table>
@@ -118,6 +129,7 @@ if (file_exists('../../../wp-includes/js/tinymce/tiny_mce_popup.js')){
 <?php
 if(!empty($_POST) && !empty($_FILES)) {
 
+
 $file = $_FILES['file'];
 $error_text = true; // Show text or number
 define("UPLOAD_ERR_EMPTY",5);
@@ -139,9 +151,8 @@ define("UPLOAD_ERR_EMPTY",5);
    $err = ($error_text) ? $upload_errors[$file['error']] : $file['error'] ;
 
    if($file['error'] !== 0) {
-		echo "<div class='red'>" . $err . "</div>";
+		echo "<div class='error'>" . $err . "</div>";
 	} else {
-	
 
 		include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/APIClient.php');
     	include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/StorageApi.php');
@@ -161,9 +172,29 @@ define("UPLOAD_ERR_EMPTY",5);
         $width = (int) $_POST['width'];
         $height = (int) $_POST['height'];
 		$result = $api->Upload(strip_tags(trim($_POST['userId'])), $name, 'uploaded', null, $fs);
+       if (!empty($_POST['can_view'])) {
+           $can_view = 'True';
+       } else {
+           $can_view = 'False';
+       };
+       if (!empty($_POST['can_annotate'])) {
+           $can_annotate = 'True';
+       } else {
+           $can_annotate = 'False';
+       };
+       if (!empty($_POST['can_download'])) {
+           $can_download = 'True';
+       } else {
+           $can_download = 'False';
+       };
+       if (!empty($_POST['can_export'])) {
+           $can_export = 'True';
+       } else {
+           $can_export = 'False';
+       };
 
 		echo"<script>
-			tinyMCEPopup.editor.execCommand('mceInsertContent', false, '[grpdocsannotation file=\"" . @$result->result->guid . "\" height=\"{$height}\" width=\"{$width}\"]');
+			tinyMCEPopup.editor.execCommand('mceInsertContent', false, '[grpdocsannotation file=\"" . @$result->result->guid . "\" height=\"{$height}\" width=\"{$width}\"  can_view=\"{$can_view}\" can_annotate=\"{$can_annotate}\" can_download=\"{$can_download}\" can_export=\"{$can_export}\" email=\"{$_POST['email']}\"]');
 			tinyMCEPopup.close();</script>";
 		die;
 	}

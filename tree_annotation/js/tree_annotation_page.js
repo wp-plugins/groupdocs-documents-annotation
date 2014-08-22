@@ -5,7 +5,9 @@ var groupdocs_annotation_error_counter = 0;
 		loadFileTree($);
 	})
 })(jQuery);
-
+function strip_tags(str){
+    return str.replace(/<\/?[^>]+>/gi, '');
+};
 
 function loadFileTree($){
 	$('.aui-message').remove();
@@ -35,7 +37,36 @@ function loadFileTree($){
                         self.css( 'border', '3px solid red' );
 						var height = parseInt($('#height').val());
 						var width =  parseInt($('#width').val());
-						$('#shortcode').val('[grpdocsannotation file="' + self.attr('rel') + '" width="' + width + '" height="' +  height + '"]');
+                        var url = self.attr('rel');
+
+                        if (( jQuery('#email').val() !=0 ) & ( jQuery('#email').val() ) !=null) {
+                            var email = strip_tags(jQuery('#email').val());
+                        }
+                        if (jQuery("input[name='can_view']").is(":checked") == true) {
+
+                            var can_view = "True";
+                        } else {
+
+                            var can_view = "False";
+                        }
+                        if (jQuery("input[name='can_annotate']").is(":checked") == true) {
+                            var can_annotate="True";
+                        } else {
+                            var can_annotate = "False";
+                        }
+
+                        if (jQuery("input[name='can_download']").is(":checked") == true) {
+                            var can_download = "True";
+                        } else {
+                            var can_download = "False";
+                        }
+
+                        if (jQuery("input[name='can_export']").is(":checked") == true) {
+                            var can_export = "True" ;
+                        } else {
+                            var can_export = "False";
+                        }
+						$('#shortcode').val('[grpdocsannotation file="'+url+'" width="'+width+'" height="'+ height+'" email="'+email+'" can_view="'+can_view+'" can_annotate="'+can_annotate+' " can_download="'+can_download+'" can_export="'+can_export+'"]');
 					})
 				}
 			});

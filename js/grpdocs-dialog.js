@@ -15,6 +15,7 @@ var GrpdocsInsertDialog = {
 	init : function() {
 		var f = document.forms[0];
         var shortcode;
+        var i = 0;
 		
 				jQuery('.diy').click(function(){
 				// diy option selected
@@ -51,10 +52,31 @@ var GrpdocsInsertDialog = {
 				});
 				jQuery('#width').blur(function(){
 					update_sc();
-				});	
+				});
+                jQuery('#file_url').blur(function(){
+                    update_sc();
+                });
 				jQuery('#url').blur(function(){
 					update_sc();
 				});
+                jQuery("input[name='email']").blur(function(){
+                    update_sc();
+                });
+                jQuery("input[name='can_export']").change(function () {
+                    update_sc();
+                });
+                jQuery("input[name='can_view']").change(function () {
+                    update_sc();
+                });
+                jQuery("input[name='can_annotate']").change(function () {
+                    update_sc();
+                });
+                jQuery("input[name='can_download']").change(function () {
+                    update_sc();
+                });
+
+
+
         function strip_tags(str){
             return str.replace(/<\/?[^>]+>/gi, '');
         };
@@ -71,10 +93,39 @@ var GrpdocsInsertDialog = {
 				if (( jQuery('#height').val() !=0 ) & ( jQuery('#height').val() ) !=null) {
 					shortcode = shortcode + '  height="'+strip_tags(jQuery('#height').val())+'"';
 				}
+                if (( jQuery('#file_url').val() !=0 ) & ( jQuery('#file_url').val() ) !=null) {
+                    shortcode = shortcode + '  file="'+strip_tags(jQuery('#file_url').val())+'"';
+                }
 				if (( jQuery('#width').val() !=0 ) & ( jQuery('#width').val() ) !=null) {
 					shortcode = shortcode + '  width="'+strip_tags(jQuery('#width').val())+'"';
 				}
-				
+                if (( jQuery('#email').val() !=0 ) & ( jQuery('#email').val() ) !=null) {
+                    shortcode = shortcode + '  email="'+strip_tags(jQuery('#email').val())+'"';
+                }
+                if (jQuery("input[name='can_view']").is(":checked") == true) {
+
+                    shortcode = shortcode + '  can_view="True"';
+                } else {
+
+                    shortcode = shortcode + '  can_view="False"';
+                }
+                if (jQuery("input[name='can_annotate']").is(":checked") == true) {
+                    shortcode = shortcode + '  can_annotate="True"';
+                } else {
+                    shortcode = shortcode + '  can_annotate="False"';
+                }
+
+                if (jQuery("input[name='can_download']").is(":checked") == true) {
+                    shortcode = shortcode + '  can_download="True"';
+                } else {
+                    shortcode = shortcode + '  can_download="False"';
+                }
+
+                if (jQuery("input[name='can_export']").is(":checked") == true) {
+                    shortcode = shortcode + '  can_export="True"';
+                } else {
+                    shortcode = shortcode + '  can_export="False"';
+                }
 				if ( jQuery("input[@name'save']:checked").val() == '1') {
 					shortcode = shortcode + '  save="1"';
 				}

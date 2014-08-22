@@ -99,6 +99,14 @@ Please see [this page](http://groupdocs.com/docs/display/Viewer/How+to+Get+the+G
 
 == Changelog ==
 
+= 1.3.12 =
+* Added enabling/disabling document downloading
+* Added enabling/disabling document viewing
+* Added enabling/disabling document annotating
+* Added enabling/disabling document exporting
+* Added field "Email for Collaborator"
+* Added functionality the registration of collaborator for opportunity annotate document
+
 = 1.3.11 =
 * Minor bug fixes.(Support Wordpress version 3.9)
 
