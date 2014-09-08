@@ -50,7 +50,7 @@ if (file_exists('../../../wp-includes/js/tinymce/tiny_mce_popup.js')){
   </tr>
 </table>
 <div id="collaborator">
-    <strong>Collaborator email:</strong><br><input name="email" type="text" class="opt dwl" id="email" style="width:200px;"/>
+    <strong>Collaborator email:</strong><br><input name="email" type="email" class="opt dwl" id="email" style="width:200px;"/>
     <table>
         <tr>
             <td><strong>CanView: </strong><input type="checkbox" name="can_view" id="can_view"></td>

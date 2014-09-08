@@ -27,46 +27,63 @@ function grpdocs_annotation_getdocument($atts) {
 		'page' => 0,
 		'version' => 1,
 	), $atts));
+    $code = null;
+    if (!empty($file) and !is_null($file)){
+        $signer = '';
+        $clientId = get_option('annotation_userId');
+        $privateKey = get_option('annotation_privateKey');
+        if(class_exists('GroupDocsRequestSigner')){
+            $signer = new GroupDocsRequestSigner($privateKey);
+        }else{
+            include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/APIClient.php');
+            include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/StorageApi.php');
+            include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/GroupDocsRequestSigner.php');
+            include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/FileStream.php');
+            $signer = new GroupDocsRequestSigner($privateKey);
+        }
+        include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/AntApi.php');
 
-    $signer = '';
-    $clientId = get_option('annotation_userId');
-    $privateKey = get_option('annotation_privateKey');
-    if(class_exists('GroupDocsRequestSigner')){
-        $signer = new GroupDocsRequestSigner($privateKey);
-    }else{
-        include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/APIClient.php');
-        include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/StorageApi.php');
-        include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/GroupDocsRequestSigner.php');
-        include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/FileStream.php');
-        $signer = new GroupDocsRequestSigner($privateKey);
-    }
-    include_once(dirname(__FILE__) . '/tree_annotation/lib/groupdocs-php/AntApi.php');
-    $apiClient = new APIClient($signer);
-    $antApi = new AntApi($apiClient);
-    $antApi->setBasePath('https://api.groupdocs.com/v2.0');
-    $reviewer = new ReviewerInfo();
-    $reviewer->primary_email = $email;
-    $can_view = $can_view == 'True'? 1 : 0;
-    $can_download = $can_download =='True'? 4 : 0;
-    $can_annotate = $can_annotate =='True'? 2 : 0;
-    $can_export = $can_export =='True'? 8 : 0;
-    $access_rights = (string)(array_sum(array($can_view,$can_download,$can_annotate,$can_export)));
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $apiClient = new APIClient($signer);
+            $antApi = new AntApi($apiClient);
+            $antApi->setBasePath('https://api.groupdocs.com/v2.0');
+            $reviewer = new ReviewerInfo();
+            $reviewer->primary_email = $email;
+            $can_view = $can_view == 'True'? 1 : 0;
+            $can_download = $can_download =='True'? 4 : 0;
+            $can_annotate = $can_annotate =='True'? 2 : 0;
+            $can_export = $can_export =='True'? 8 : 0;
+            $access_rights = (string)(array_sum(array($can_view,$can_download,$can_annotate,$can_export)));
 
-    $reviewer->access_rights = $access_rights;
-    $addCollaborator = $antApi->AddAnnotationCollaborator($clientId, $file, $reviewer);
-    if ($addCollaborator->status == "Ok") {
-        $url = "https://apps.groupdocs.com/document-annotation2/embed/{$file}?referer=wordpress-annotation/1.3.12";
+            $reviewer->access_rights = $access_rights;
 
-        $code_url = $signer->signUrl($url);
+            $addCollaborator = $antApi->AddAnnotationCollaborator($clientId, $file, $reviewer);
 
-        $no_iframe = 'If you can see this text, your browser does not support iframes. Please enable iframe support in your browser or use the latest version of any popular web browser such as Mozilla Firefox or Google Chrome. For more help, please check our documentation Wiki: <a href="http://groupdocs.com/docs/display/annotation/GroupDocs+Annotation+Integration+with+3rd+Party+Platforms">http://groupdocs.com/docs/display/annotation/GroupDocs+Annotation+Integration+with+3rd+Party+Platforms</a>';
-        $code = "<iframe src='{$code_url}' frameborder='0' width='{$width}' height='{$height}'>{$no_iframe}</iframe>";
+            if ($addCollaborator->status == "Ok") {
+                $url = "https://apps.groupdocs.com/document-annotation2/embed/{$file}?referer=wordpress-annotation/1.3.12";
 
-        return $code;
+                $code_url = $signer->signUrl($url);
 
+                $no_iframe = 'If you can see this text, your browser does not support iframes. Please enable iframe support in your browser or use the latest version of any popular web browser such as Mozilla Firefox or Google Chrome. For more help, please check our documentation Wiki: <a href="http://groupdocs.com/docs/display/annotation/GroupDocs+Annotation+Integration+with+3rd+Party+Platforms">http://groupdocs.com/docs/display/annotation/GroupDocs+Annotation+Integration+with+3rd+Party+Platforms</a>';
+                $code = "<iframe src='{$code_url}' frameborder='0' width='{$width}' height='{$height}'>{$no_iframe}</iframe>";
+
+            } else {
+                throw new Exception($addCollaborator->error_message);
+            }
+        } else {
+            $url = "https://apps.groupdocs.com/document-annotation2/embed/{$file}?referer=wordpress-annotation/1.3.12";
+
+            $code_url = $signer->signUrl($url);
+
+            $no_iframe = 'If you can see this text, your browser does not support iframes. Please enable iframe support in your browser or use the latest version of any popular web browser such as Mozilla Firefox or Google Chrome. For more help, please check our documentation Wiki: <a href="http://groupdocs.com/docs/display/annotation/GroupDocs+Annotation+Integration+with+3rd+Party+Platforms">http://groupdocs.com/docs/display/annotation/GroupDocs+Annotation+Integration+with+3rd+Party+Platforms</a>';
+            $code = "<p>Collaborator \"{$email}\" is not added in your document, because this \"{$email}\" not is email </p><iframe src='{$code_url}' frameborder='0' width='{$width}' height='{$height}'>{$no_iframe}</iframe>";
+        }
     } else {
-        throw new Exception($addCollaborator->error_message);
+        $code = "Please choose file for annotate";
     }
+
+
+    return $code;
 
 
 }
