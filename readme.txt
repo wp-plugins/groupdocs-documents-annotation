@@ -12,9 +12,9 @@ Annotate PDF, Word, Excel, PowerPoint documents and images online, right on your
 
 == Description ==
 
-GroupDocs Annotation Plugin lets you embed different types of documents and images into your website and then invite your colleagues and clients to view and annotate them online, without the need to install any document editors or browser plugins.
+GroupDocs.Annotation for Cloud Plugin lets you embed different types of documents and images into your website and then invite your colleagues and clients to view and annotate them online, without the need to install any document editors or browser plugins.
 
-While modern document editors have built-in tools for annotating documents through comments and tracking changes, the conventional way of working on documents has become too slow and bulky for today’s business pace. New cloud services such as GroupDocs Annotation streamline this process and offer new and more efficient ways of collaborating with your team.  
+While modern document editors have built-in tools for annotating documents through comments and tracking changes, the conventional way of working on documents has become too slow and bulky for today’s business pace. New cloud services such as GroupDocs.Annotation streamline this process and offer new and more efficient ways of collaborating with your team.  
 
 = No need to install any document editors. =  
 
@@ -22,7 +22,7 @@ While it may still be okay to ask your team members to install the same piece of
 
 = No compatibility issues. =
 
-Even if your team members already have document and image editors for other tasks, they may prefer different types of software, which may cause compatibility problems. With GroupDocs Annotation you can be sure that your colleagues and partners will see your document exactly the way you see it on your computer. 
+Even if your team members already have document and image editors for other tasks, they may prefer different types of software, which may cause compatibility problems. With GroupDocs.Annotation you can be sure that your colleagues and partners will see your document exactly the way you see it on your computer. 
 
 = Real-time collaboration. = 
 
@@ -30,11 +30,11 @@ Instead of waiting for an e-mail from each of your team members with their feedb
 
 = Absolutely mobile. = 
 
-Now you don’t need to check your e-mail, then download the attached document and open it in a specific program to be able to view and annotate it. GroupDocs Annotation will allow you to do this on any mobile device while you are on the go. 
+Now you don’t need to check your e-mail, then download the attached document and open it in a specific program to be able to view and annotate it. GroupDocs.Annotation will allow you to do this on any mobile device while you are on the go. 
 
 = Different types of documents and images supported. =
 
-GroupDocs Annotation plugin allows you to [annotate PDF documents](http://groupdocs.com/apps/annotation), Excel spreadsheets, word-processing documents, PowerPoint presentations and image files (JPG, BMP, GIF, TIFF) online. 
+GroupDocs.Annotation plugin allows you to [annotate PDF documents](http://groupdocs.com/apps/annotation), Excel spreadsheets, word-processing documents, PowerPoint presentations and image files (JPG, BMP, GIF, TIFF) online. 
 
 ------------------------------
 
@@ -63,7 +63,7 @@ GroupDocs Annotation plugin allows you to [annotate PDF documents](http://groupd
 = Embedding a document to a web-page = 
  
 1. Upload a document to your GroupDocs account.
-2. Use the GroupDocs Annotation Embed button in the Visual editor to build an appropriate shortcode by coping & pasting the document's link.
+2. Use the GroupDocs.Annotation Embed button in the Visual editor to build an appropriate shortcode by coping & pasting the document's link.
 
 An alternative way to embed a document is to upload it via the plugin to your groupdocs.com account. A shortcode will be automatically generated and inserted to the content of the post.
 
@@ -75,10 +75,10 @@ Be aware that in order to upload a document via the plugin, you will need to ent
 
 == Screenshots ==
 
-1. Here's a screenshot of how to get your document link for insertion into the GroupDocs Annotation Embedder dialog
-2. Here's a screenshot of the GroupDocs Annotation Embedder in a Wordpress blog (with Polyline annotation)
-3. Here's a screenshot of the GroupDocs Annotation Embedder in a Wordpress blog (with Point annotation)
-4. Here's a screenshot of the GroupDocs Annotation Embedder in a Wordpress admin panel
+1. Here's a screenshot of how to get your document link for insertion into the GroupDocs.Annotation for Cloud dialog
+2. Here's a screenshot of the GroupDocs.Annotation for Cloud in a Wordpress blog (with Polyline annotation)
+3. Here's a screenshot of the GroupDocs.Annotation for Cloud in a Wordpress blog (with Point annotation)
+4. Here's a screenshot of the GroupDocs.Annotation for Cloud in a Wordpress admin panel
 
 
 == Frequently Asked Questions ==
