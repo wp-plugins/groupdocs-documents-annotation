@@ -1,4 +1,4 @@
-=== GroupDocs Document and Image Annotation Plugin ===
+=== GroupDocs.Annotation for Cloud ===
 Contributors: GroupDocs Team
 Tags: groupdocs, groupdocs plugin, groupdocs annotation, annotate pdf, pdf annotation, annotate documents
 Author URI: http://groupdocs.com/apps/annotation
@@ -12,7 +12,7 @@ Annotate PDF, Word, Excel, PowerPoint documents and images online, right on your
 
 == Description ==
 
-GroupDocs.Annotation for Cloud Plugin lets you embed different types of documents and images into your website and then invite your colleagues and clients to view and annotate them online, without the need to install any document editors or browser plugins.
+GroupDocs.Annotation for Cloud plugin lets you embed different types of documents and images into your website and then invite your colleagues and clients to view and annotate them online, without the need to install any document editors or browser plugins.
 
 While modern document editors have built-in tools for annotating documents through comments and tracking changes, the conventional way of working on documents has become too slow and bulky for today’s business pace. New cloud services such as GroupDocs.Annotation streamline this process and offer new and more efficient ways of collaborating with your team.  
 
