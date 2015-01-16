@@ -3,7 +3,7 @@ Contributors: GroupDocs Team
 Tags: groupdocs, groupdocs plugin, groupdocs annotation, annotate pdf, pdf annotation, annotate documents
 Author URI: http://groupdocs.com/apps/annotation
 Requires at least: 2.8
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: trunk 
 License: GPLv2
 
@@ -98,6 +98,9 @@ cURL extension is required (extension=php_curl.dll)
 Please see [this page](http://groupdocs.com/docs/display/Viewer/How+to+Get+the+GUID+Or+Document+ID) for a detailed instruction.
 
 == Changelog ==
+
+= 1.3.13 =
+* Added functionality set access rights for collaborator
 
 = 1.3.12 =
 * Added enabling/disabling document downloading
