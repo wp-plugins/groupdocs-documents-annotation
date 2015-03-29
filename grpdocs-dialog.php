@@ -90,11 +90,11 @@ if (file_exists('../../../wp-includes/js/tinymce/tiny_mce_popup.js')){
 </div>
 
 <div class="box">
- 
+
   <strong>Document Id (GUID)</strong><br />
   <input name="url" type="text" class="opt dwl" id="url" style="width:200px;" /><br/>
   <span id="uri-note"></span>
-  
+
 </div>
 </div><!-- .section -->
 	
@@ -171,7 +171,7 @@ define("UPLOAD_ERR_EMPTY",5);
     	$api = new StorageApi($apiClient);
         $width = (int) $_POST['width'];
         $height = (int) $_POST['height'];
-		$result = $api->Upload(strip_tags(trim($_POST['userId'])), $name, 'uploaded', null, $fs);
+		$result = $api->Upload(strip_tags(trim($_POST['userId'])), $name, 'uploaded', null, null, $fs);
        if (!empty($_POST['can_view'])) {
            $can_view = 'True';
        } else {

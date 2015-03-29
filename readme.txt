@@ -3,7 +3,7 @@ Contributors: GroupDocs Team
 Tags: groupdocs, groupdocs plugin, groupdocs annotation, annotate pdf, pdf annotation, annotate documents
 Author URI: http://groupdocs.com/apps/annotation
 Requires at least: 2.8
-Tested up to: 4.1
+Tested up to: 4.0
 Stable tag: trunk 
 License: GPLv2
 
@@ -100,7 +100,7 @@ Please see [this page](http://groupdocs.com/docs/display/Viewer/How+to+Get+the+G
 == Changelog ==
 
 = 1.3.13 =
-* Added functionality set access rights for collaborator
+* Updated GroupDocs SDK version in the plugin
 
 = 1.3.12 =
 * Added enabling/disabling document downloading
